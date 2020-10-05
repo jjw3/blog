@@ -2,25 +2,80 @@
   <head>
     <head>
       <meta charset="utf-8">
-      <title>Blog</title>
+      <title>Sharice's Blog</title>
     </head>
   </head>
   
   <body>
     
     <style>
-    h1 {color: red; font-size: 100px; 
-      text-align: center;
-      overflow: auto; 
+   		/* header style */
+      	.header { 
+      padding: 10px;
+      background: black;
+      color: salmon; 
+      text-align: center; }
       
-        }
+      /* Page stuff */
+      .content { 
+      padding: 16px; }
+      
+      /* sticky header */
+      .sticky {
+    Position: fixed;
+      top: 0;
+      width: 100%;  }
+      
+      /* to prevent quick movement*/
+      .sticky + .content { 
+      padding-top: 102px; }
+      
+     /* space between header row*/
+    
+     /* JavaScript*/
+       
     
     </style>
     
    <h1>
-     Blog coming soon
-    </h1> 
+    	<div class="header" id="myHeader">
+        	<h2>
+             	<table>
+                  <thread>
+                  	<th>
+                      	<td id="tableData">
+                    		<tr>Home</tr>
+                      		<tr>Blog</tr>
+                      		<tr>About</tr>
+                    	</td>
+                    </th>
+                  </thread>
+              </table>
+          </h2>  
+     	</div>
+    </h1>
+     <div class="content">
+       
+     	
+     <img src="https://i.kinja-img.com/gawker-media/image/upload/s--hMvpKjvi--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/hx8fyd08wipcizrqmm1d.jpg">
+
+      
+       
     
-    
+     </div>
   </body>
+
+ <script>
+  winddow.onscroll = function() {myFunction()};
+
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+  
+  function myFunction() { 
+    if (window.pageYOffset > stick) {
+     header.classList.add("sticky"); }
+    else { header.classList.remove("sticky"); }
+}
+  
+ </script>
 </HTML>
