@@ -11,29 +11,79 @@
     
     <style>
  
-	    h1 { 
-	    color: red;
-		 font-size: 40;
-	    
-	    }
+     /* space between header row*/
+    	.td {
+         width: 150px;
+      	 text-align: center;
+      	 padding: 15px;
+      	 color: white;
+      	 background-color: 33004d;      
+      }
+      
+      #blmPhoto { 
+      width: 100%; }
+     h2 { 
+      text-align: center;
+      color: ff8080;
+      }
+     
+      .photoGallery { 
+      width: 30%;
+      margin: 8;     
+      }
+      
+    /* below line is for search bar*/
+       
           
 
     </style>
     
    
-
+    	<div class="header" id="myHeader">
+        	<h2>
+             	<table>
+                  <thread>
+                  	<th>   
+                                                    	
+                    		<td class="td">Blog</a></td>
+                      		<td class="td">About</a></td>
+                      		<td class="td">Contact</a></td>
+                                <td class="td" id="searchBar"> <form action="/action_page.php" class="form- 
+                                   container">
+                                <label for="name"><b>
+                                <input type="text" placeholder="Search..." required>
+                                </form> </td>                                                               
+                    </th>
+                  </thread>
+              </table>
+          </h2>  
+		</div>
      
 
        
      	<h1>                     
-		<p>	 Under Construction... </p>
-        
-          
+         		 <img id="blmPhoto" src="https://i.ytimg.com/vi/gGLe5148wVU/maxresdefault.jpg" alt="Black lives matter photo">     
        	</h1>
-
+<div>
+  <h2>
+     Latest Blogs
+  </h2>
+</div>  
+<div>
+  <table>
+		<thread>    
+  			<th>
+  			
+              <tr><img class="photoGallery" src="http://graphicdesignjunction.com/wp-content/uploads/2011/07/cool-photos-artwork-27.jpg" alt="Close up photo of leaves"></tr>
+              <tr>	<img class="photoGallery" src="http://cdn1.blog-media.zillowstatic.com/1/Downtown-Raleigh-f1fa69.jpg" alt="photo of downtown Raleigh"> </tr>
+              <tr>	<img class="photoGallery" src="https://cdn.wallpapersafari.com/96/60/GSIhfO.jpg" alt="photo of North Carolina State University's logo"> </tr>
+          </th>
+    </thread>
+  </table> 
+</div>
       
        
     
-    
+     </div>
   </body>
 </HTML>
