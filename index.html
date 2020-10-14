@@ -24,7 +24,6 @@
       color: white;
       text-align: center;
       font-size: 40px;
-      background-color: black;
       } 	
  
       h1 { 
@@ -33,23 +32,8 @@
       color: 004466;     
       }
       
-
-.content {
- 
-}
-
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
-
-.sticky + .content {
-  padding-top: 102px;
-}
       
+
       
       
       
@@ -88,27 +72,6 @@
   
   
   </body>
-<script>
-  
-window.onscroll = function() {myFunction()};
-
-
-var header = document.getElementById("myHeader");
-
-
-var sticky = header.offsetTop;
-
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}  
-
-</script>
-
 </HTML>
 
 
