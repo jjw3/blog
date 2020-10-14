@@ -20,30 +20,37 @@
       height: 700px;
       }   
       
-      th, td {
+      #myHeading {
       		color: ff99e6;
       		text-align: center;
       		padding: 20px;
       		padding-right: 100px;
-      		font-size: 30;
-      	    }
+      		font-size: 30;  }
       
-      table {
-      		width: 100%
+      #table2 {
+      		width: 50%;
+      		padding: 20px;
       }
       
       h2 { 
       text-align: center;
       font-size: 50px;
       color: 004466;     
-      padding: 15px;
+      }
+      
+      hr {
+      	border: 1px solid black;
+      }
+      
+      .blogPic {
+      width: 50%;
       }
     
     </style>                
        
      	<div id="heading">
 
-          <table width="50%">
+          <table id="myHeading" width="100%">
           <tr>
           	<th>Blog</th>
             <th>About</th>
@@ -52,15 +59,19 @@
    		</table>
           
     	</div>          
-  
-   	
-    	
-    	
-  
+
+    <hr>
       <h2>
         Blogs
       </h2>
  
+  <table id="table2">
+  	<tr>
+    	<th><img class="blogPic" src="http://cdn1.blog-media.zillowstatic.com/1/Downtown-Raleigh-f1fa69.jpg"></th>
+      	
+      
+    </tr>  
+  </table>  
   
   
   </body>
