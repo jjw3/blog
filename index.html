@@ -18,36 +18,67 @@
   background-size: cover;
       width: 100%;
       height: 700px;
+      padding: none; }   
+   
+   #myHeader {
       color: white;
       text-align: center;
       font-size: 40px;
-      padding: none; }   
-   
-    	
+      background-color: black;
+      } 	
  
       h1 { 
       text-align: center;
       font-size: 50px;
-      color: 004466;
-      
+      color: 004466;     
       }
+      
+
+.content {
+ 
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+
+.sticky + .content {
+  padding-top: 102px;
+}
+      
+      
+      
+      
+      
+      
       
       
     </style>                
        
      	<div id="heading">
-          <table>
-            <thread>
-            	<th>
-                  <td>
-              		<tr>Home</tr>
-                  	<tr>About</tr>
-                  	<tr>Contact</tr>
-              	 </td>
-             	</th>
-            </thread>
-          </table>
-  	  </div>          
+          
+              
+    			<div class="header" id="myHeader">
+                  <h2>
+                    <table>
+           			 <thread>
+            			<th>
+               			   <td>
+              				<tr>Home</tr>
+                  			<tr>About</tr>
+                  			<tr>Contact</tr>
+              			 </td>
+             			</th>
+           			 </thread>
+         		 </table>
+               </h2>  
+    		</div>  
+  	  
+    	</div>          
   
   
       <h1>
@@ -57,6 +88,27 @@
   
   
   </body>
+<script>
+  
+window.onscroll = function() {myFunction()};
+
+
+var header = document.getElementById("myHeader");
+
+
+var sticky = header.offsetTop;
+
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}  
+
+</script>
+
 </HTML>
 
 
