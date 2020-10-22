@@ -6,25 +6,36 @@
   <body>
  	
     <style>
-    	#hname {
-      	color: #b3e6ff;
+    	.mainhead {
       	text-align: center;
-      	font-size: 40px; 
-      	background-color: #ff9999;
+      	background-color: black;
       	}
-    
-      #navs {
-      text-align: center;
-      background-color: gray;
-      }
+
+      #headname {
+       color: #66ccff;}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  color: red;
+  font-size: 30px;
+}
+
+th, td {
+  padding: 10px;
+  width: 400px;
+}
+
+
       
       #aboutMe {
-      	background-color: salmon;
+      	background-color: 003366;
       	color: white;
       	width: 30%;
       	min-height: 1000px;
       	max-height: 1000px;
        	position: relative;
+        margin-top: -20px;
       }
       
       #aboutmename {
@@ -43,11 +54,11 @@
       }
       
       .latestblogs {
-      	background-color: #380bfff;
+      	background-color: #4d0026;
       	height: 100%;
       	position: absolute;
-      	top: 120px;
-      	right: 0px;
+      	top: 122px;
+      	right: -3px;
       	width: 70%; }
 
    
@@ -81,7 +92,7 @@
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: red;
+  color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -96,7 +107,7 @@
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: red;
+  color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -138,27 +149,33 @@
       
       
       #allContent {
-      	background-color: white;
+      	background-color: 4d0026;
       	width: 70%;
       	position: absolute;
       	top: 650px;
       	right: -3px;
       	min-height: 1000px;	
         max-height: 1000px;
+        margin-top: -45px;
         
       }
 
       
     </style>
-  <div>
- <h1 id="hname">
+  <div class="mainhead">
+ <h1 id="headname">
    Sharice Wells
     </h1>
-   </div>
+
+<table id="navs">
+ <th>Contact></th>
+ <th>Blogs</th>
+ <th>About</th>
+ </table>  
+ </div>
+
     
-    <div id="navs">
-      place navs here
-    </div>
+    
    	
     <div id="aboutMe">
   		<h1 id="aboutmename">
