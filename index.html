@@ -127,8 +127,9 @@
 
 	/* Popup arrow */
 	.popup .popuptext:after {
-	  content: "";
+	  content: "Send a message!";
 	  position: absolute;
+          color: red;
 	  top: 100%;
 	  left: 50%;
 	  margin-left: -5px;
@@ -339,12 +340,12 @@
 
 <form action="/action_page.php">
   <label for="fname">Full name:</label><br>
-  <input type="text" id="fname" name="fname" value="Full name..."><br>
+  <input type="text" id="fname" name="fname" placeholder="Full name..."><br>
   <label for="lname">Email:</label><br>
-  <input type="text" id="lname" name="lname" value="Email..."><br><be>
+  <input type="text" id="lname" name="lname" placeholder="Email..."><br><be>
 
   <label for="fname">Message:</label><br>
-  <input type="text" id="fname" name="fname" value="Message..."><br>
+  <input type="text" id="fname" name="fname" placeholder="Message..."><br>
 
   <input type="submit" value="Submit">
 </form>
