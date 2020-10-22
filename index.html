@@ -50,19 +50,7 @@
       	right: 0px;
       	width: 70%; }
 
-        #blog1 {
-      position: absolute;
-      	top: 75px;
-      	right: 450;
-      	width: 35%;
-      }
-      
-      #blog2 {
-      position: absolute;
-      	top: 75px;
-      	right: 90px;
-      	width: 35%;   
-      }
+   
      
       
       #latTitle {
@@ -70,13 +58,91 @@
       	text-align: center;
       	font-size: 30px;    
       }
-             
+          
+     * {box-sizing:border-box}
+   
+      .slideshow {
+      	position: absolute;
+        top: 200px;
+        left: 500px;
+        margin: auto;
+  	
+      }
+      
+      .mySlides {
+      display: none;
+      
+      }
+      
+  		.prev{
+      		cursor: pointer;
+  position: absolute;
+  top: 350px;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+      }
+      
+      .next{
+      cursor: pointer;
+  position: absolute;
+  top: 350px;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+      
+      }
+      
+      .next {
+  right: 95px;
+  border-radius: 3px 0 0 3px;
+}
+
+    .prev {
+     left: 450px;
+}
+
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+  
+      
+      
       #allContent {
       	background-color: black;
       	width: 70%;
       	position: absolute;
-      	top: 500px;
-      	right: 0px;
+      	top: 650px;
+      	right: -3px;
       	min-height: 1000px;	
         max-height: 1000px;
         
@@ -106,16 +172,30 @@
     <div class="latestblogs">
       <h1 id="latTitle">
         Latest Blogs
-      </h1> 
-        <table id="table1">
-      		<th class="blogS">
-        	<img id="blog1" src="https://cdn.vox-cdn.com/thumbor/4j2dRjALphj7jzojI2BvtyE1iOM=/0x0:4928x3264/1200x800/filters:focal(2070x1238:2858x2026)/cdn.vox-cdn.com/uploads/chorus_image/image/52337951/Snow_at_Wollman_Rink.0.jpeg">
-      	  </th>
-       	 <th>
-        <img id="blog2" src="http://citydadsgroup.com/nyc/wp-content/uploads/sites/2/2014/02/winter-snow-storm-new-york-city-times-square-snow_thumb-25255B2-25255D.jpg">
-       	 </th>    
-    </table>   
+      </h1>   
     </div>
+    
+    
+    <div class="slideshow">
+     
+      <div class="mySlides">
+          	<img src="https://cdn.vox-cdn.com/thumbor/4j2dRjALphj7jzojI2BvtyE1iOM=/0x0:4928x3264/1200x800/filters:focal(2070x1238:2858x2026)/cdn.vox-cdn.com/uploads/chorus_image/image/52337951/Snow_at_Wollman_Rink.0.jpeg" style="width:80%">
+     		<div class="text">Caption here</div>
+    </div>
+    
+    <div class="mySlides">
+          	<img src="http://citydadsgroup.com/nyc/wp-content/uploads/sites/2/2014/02/winter-snow-storm-new-york-city-times-square-snow_thumb-25255B2-25255D.jpg" style="width:80%">
+     		<div class="text">Caption here</div>
+    </div>
+   </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+    
+    
+    
     
     <div id="allContent">
       fsd
@@ -123,7 +203,37 @@
   
     
     
- 
+ <script> 
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+ </script>
   </body>
 </html>
-
