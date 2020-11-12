@@ -5,18 +5,511 @@
 	  </head>
 	  <body>
 	 	
-		 <style>
-			 h1 {
-			 color: red;
-			 font-size: 40px;
-			 
-			 } 
-			 
-		  </style>	 
-		  <h1>
-		  <marquee direction="right">Blog Coming Soon...</marquee>
-		  </h1>
-		
+	    <style>
+	    	.mainhead {
+	      	text-align: center;
+	      	background-color: black;
+	        margin: -5px;
+	      	}
+	
+
+	      #headname {
+	       color: #66ccff;}
+	
+
+	
+
+	.one {
+	  color: red;
+	  background-color: black;
+	  font-size: 30px;
+	  width: 33%;
+	  border: none;
+	  text-align: left;
+	}
+	
+
+	.two {
+	  color: red;
+	  background-color: black;
+	  font-size: 30px; 
+	  width: 33%;
+	  border: none;
+	  text-align: left;
+	}
+	
+
+	.three {
+	  color: red;
+	  background-color: black;
+	  font-size: 30px;
+	  with: 33%;
+	  border: none;
+	  text-align: left;
+	}
+	
+
+	
+
+	.one:hover {
+	  background-color: transparent;
+	  -webkit-box-shadow: 10px 10px 99px 6px rgba(04, 0, 255);
+	  -moz-box-shadow: 10px 10px 99px 6px rgba(04, 0, 255);
+	  box-shadow: 10px 10px 99px 6px rgba(04, 0, 255);
+	}
+	
+
+	.two:hover {
+	  background-color: transparent;
+	  -webkit-box-shadow: 10px 10px 99px 6px rgba(04, 0, 255);
+	  -moz-box-shadow: 10px 10px 99px 6px rgba(04, 0, 255);
+	  box-shadow: 10px 10px 99px 6px rgba(04, 0, 255);
+	}
+	
+
+	
+
+	.three:hover {
+	  background-color: transparent;
+	  -webkit-box-shadow: 10px 10px 99px 6px rgba(04, 0, 255);
+	  -moz-box-shadow: 10px 10px 99px 6px rgba(04, 0, 255);
+	  box-shadow: 10px 10px 99px 6px rgba(04, 0, 255);
+	}
+	
+
+	
+   #moveText {
+     position: absolute;
+     width: 100%;
+     font-size: 30px;
+     color: red;
+     z-index: 0;
+
+}
+	
+
+	  
+	
+
+	
+
+	
+
+	
+
+	.popup {
+	  position: relative;
+	  display: inline-block;
+	  cursor: pointer;
+	  text-align: left;
+	  position: absolute;
+	  left: 45px;
+	  
+	}
+	
+
+	/* The actual popup (appears on top) */
+	.popup .popuptext {
+	  visibility: hidden;
+	  width: 400px;
+	  background-color: #990000;
+	  color: #fff;
+	  text-align: center;
+	  border-radius: 6px;
+	  padding: 8px 0;
+	  position: absolute;
+	  z-index: 1;
+	  top: 60px;
+          left: 70px;
+	  margin-left: -80px;
+	}
+	
+
+	/* Popup arrow */
+	.popup .popuptext:after {
+	  content: "Send a message!";
+	  position: absolute;
+          color: red;
+	  top: 100%;
+	  left: 50%;
+	  margin-left: -5px;
+	  border-width: 5px;
+	  border-style: solid;
+	  border-color: #555 transparent transparent transparent;
+	}
+	
+
+	/* Toggle this class when clicking on the popup container (hide and show the popup) */
+	.popup .show {
+	  visibility: visible;
+	  -webkit-animation: fadeIn 1s;
+	  animation: fadeIn 1s
+	}
+	
+
+	/* Add animation (fade in the popup) */
+	@-webkit-keyframes fadeIn {
+	  from {opacity: 0;}
+	  to {opacity: 1;}
+	}
+	
+
+	@keyframes fadeIn {
+	  from {opacity: 0;}
+	  to {opacity:1 ;}
+	}
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	 
+	     
+	      #aboutMe {
+	      	background-color: 003366;
+	      	color: white;
+	      	width: 30%;
+	      	min-height: 1000px;
+	      	max-height: 1000px;
+	       	position: relative;
+	        margin-top: 53px;
+	      }
+	      
+	      #aboutmename {
+	      	color: black;
+	      	text-align: center;
+	      	font-size: 30px;   
+	      }
+	            
+	      #aboutmepic {
+	      	border-radius: 50%;
+	      	width: 50%;
+	      	position: absolute;
+	      	display: block;
+	      	top: 75px;
+	      	left: 80px;     	
+	      }
+	      
+	      .latestblogs {
+	      	background-color: #4d0026;
+	      	height: 100%;
+	      	position: absolute;
+	      	top: 149px;
+	      	right: -3px;
+	      	width: 70%; }
+	
+
+	   
+	     
+	      
+	      #latTitle {
+	      	color: gray;
+	      	text-align: center;
+	      	font-size: 30px;    
+	      }
+	          
+	     * {box-sizing:border-box}
+	   
+	      .slideshow {
+	      	position: absolute;
+	        top: 200px;
+	        left: 500px;
+	        margin: auto;
+	  	
+	      }
+	      
+	      .mySlides {
+	      display: none;
+	      
+	      }
+	      
+	  		.prev{
+	      		cursor: pointer;
+	  position: absolute;
+	  top: 350px;
+	  width: auto;
+	  margin-top: -22px;
+	  padding: 16px;
+	  color: red;
+	  font-weight: bold;
+	  font-size: 18px;
+	  transition: 0.6s ease;
+	  border-radius: 0 3px 3px 0;
+	  user-select: none;
+	      }
+	      
+	      .next{
+	      cursor: pointer;
+	  position: absolute;
+	  top: 350px;
+	  width: auto;
+	  margin-top: -22px;
+	  padding: 16px;
+	  color: red;
+	  font-weight: bold;
+	  font-size: 18px;
+	  transition: 0.6s ease;
+	  border-radius: 0 3px 3px 0;
+	  user-select: none;
+	      
+	      }
+	      
+	      .next {
+	  right: 95px;
+	  border-radius: 3px 0 0 3px;
+	}
+	
+
+	    .prev {
+	     left: 450px;
+	}
+	
+
+	
+
+	
+
+	.fade {
+	  -webkit-animation-name: fade;
+	  -webkit-animation-duration: 1.5s;
+	  animation-name: fade;
+	  animation-duration: 1.5s;
+	}
+	
+
+	@-webkit-keyframes fade {
+	  from {opacity: .4}
+	  to {opacity: 1}
+	}
+	
+
+	@keyframes fade {
+	  from {opacity: .4}
+	  to {opacity: 1}
+	}
+	
+
+	
+
+	  
+	      
+	      
+	      #allContent {
+	      	background-color: 4d0026;
+	      	width: 70%;
+	      	position: absolute;
+	      	top: 650px;
+	      	right: -3px;
+	      	min-height: 1000px;	
+	        max-height: 1000px;
+	        margin-top: -45px;
+	        
+	      }
+	
+
+	      
+	    </style>
+	  <div class="mainhead">
+	 <h1 id="headname">
+	   Sharice Wells
+	    </h1>
+	
+
+	  <table>
+	   <tr id="btn">
+	
+
+	
+
+	<div class="popup" onclick="myFunction()">
+	<button class="one" type="button">Contact</button>
+	<span class="popuptext" id="myPopup">
+
+<form action="/action_page.php">
+  <label for="fname">Full name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="Full name..."><br>
+  <label for="lname">Email:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="Email..."><br><be>
+
+  <label for="fname">Message:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="Message..."><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+</span>
+	</div>
+	
+
+	<button class="two" type="button">Blogs</button>
+	
+
+	<button class="three" type="button">About</button>  
+	
+
+	   </tr>
+	  </table>
+	</div>
+	
+     <div id="moveText">
+	<marquee direction="left">Under construction, almost finished!</marquee>
+     </div>
+	    
+	   	
+	    <div id="aboutMe">
+	  		<h1 id="aboutmename">
+	           Sharice Wells
+	      </h1>    
+	      <img id="aboutmepic" src="http://photo.sydex.net/227559606.jpg" alt="picture of sharice wells"><br>     
+	  		
+	    </div>
+	    	
+	    
+	    <div class="latestblogs">
+	      <h1 id="latTitle">
+	        Latest Blogs
+	      </h1>   
+	    </div>
+	    
+	    
+	    <div class="slideshow">
+	     
+	      <div class="mySlides">
+	          	<img src="https://cdn.photographylife.com/wp-content/uploads/2017/01/A-cool-landscape-photo-960x641.jpg" style="width:80%">
+	     		<div class="text">Caption here</div>
+	    </div>
+	    
+	    <div class="mySlides">
+	          	<img src="http://citydadsgroup.com/nyc/wp-content/uploads/sites/2/2014/02/winter-snow-storm-new-york-city-times-square-snow_thumb-25255B2-25255D.jpg" style="width:80%">
+	     		<div class="text">Caption here</div>
+	    </div>
+	
+
+	
+
+	   </div>
+	    
+	    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	    
+	    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	      
+	    
+	    
+	    
+	    
+	    <div id="allContent">
+	      
+	    </div>
+	  
+	    
+	    
+	 <script> 
+	
+
+	var slideIndex = 1;
+	showSlides(slideIndex);
+	
+
+	// Next/previous controls
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+	
+
+	// Thumbnail image controls
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+	
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	      slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	      dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	}
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	// When the user clicks on <div>, open the popup
+	function myFunction() {
+	  var popup = document.getElementById("myPopup");
+	  popup.classList.toggle("show");
+	}
+	
+
+	
+
+
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	</script>
+	
+
+	
+
 	
 
 	  </body>
